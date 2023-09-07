@@ -13,7 +13,6 @@ from helpers import print_aggregation_steps
 
 class Tests(unittest.TestCase):
 
-    @unittest.skip("not now")
     def test_create_joined_permuation(self):
         list1 = [[1, 2], [3, 4]]
         list2 = [[5, 6], [7, 8]]
@@ -22,7 +21,6 @@ class Tests(unittest.TestCase):
         self.assertEqual(len(result), 1)
         self.assertEqual(len(result[0]), 8)
 
-    @unittest.skip("not now")
     def test_get_aggregator_permutations(self):
         op1 = Operator(None, None, 3)
         op2 = Operator(None, None, 2)
@@ -34,7 +32,6 @@ class Tests(unittest.TestCase):
         aggregator_permutations = get_aggregator_permutations(operators)
         self.assertEqual(len(list(aggregator_permutations)), 12)
     
-    @unittest.skip("not now")
     def test_two_nodes_one_operator_one_supported_subgraph(self):
         cs1 = Solution(id=1,
                        requirements=set(),
@@ -84,7 +81,6 @@ class Tests(unittest.TestCase):
         self.assertEqual(len(complete_aggregation_steps), 1)
         self.assertEqual(len(complete_aggregation_steps[0]), 1)
 
-    @unittest.skip("not now")
     def test_two_nodes_one_operator_two_supported_subgraphs(self):
         cs1 = Solution(id=1,
                        requirements=set(),
@@ -146,7 +142,6 @@ class Tests(unittest.TestCase):
         self.assertEqual(len(complete_aggregation_steps), 1)
         self.assertEqual(len(complete_aggregation_steps[0]), 1)
 
-    @unittest.skip("not now")
     def test_three_nodes_one_operator(self):
         cs1 = Solution(id="cs1",
                        requirements=set({"password"}),
